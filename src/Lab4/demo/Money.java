@@ -15,44 +15,24 @@ public class Money {
         return this.dollars+this.cents* 0.01;
     }
     public Money add(Money m){
-//        double thisMoney=this.dollars+this.cents* 0.01;
-//        double mMoney=m.dollars+m.cents* 0.01;
         Money money=new Money();
         double addMoney=this.amountMoney()+m.amountMoney();
         money.dollars = (int) addMoney;
         money.cents = (addMoney-money.dollars)*100;
-
-//        this.cents+=m.cents;
-//        if(this.cents> 100){
-//            this.cents-= 100;
-//            this.dollars+=m.dollars+ 1;
-//        }
-//        this.dollars+=m.dollars;
         return money;
     }
     public Money substract(Money m){
-//        double thisMoney=this.dollars+this.cents* 0.01;
-//        double mMoney=m.dollars+m.cents* 0.01;
-//        this.dollars = (int) (thisMoney-mMoney)/ 1;
-//        this.cents= (int) ((thisMoney-mMoney)-this.dollars)* 100;
         Money money=new Money();
         double subMoney=this.amountMoney()-m.amountMoney();
         money.dollars = (int) subMoney;
         money.cents= (subMoney-money.dollars)* 100;
-
-//        dollars=this.dollars-m.dollars;
-//        cents=this.cents-m.cents;
         return money;
     }
     public Money multiply(int m){
         Money money=new Money();
         double mulMoney=this.amountMoney()*m;
-
         money.dollars = (int) mulMoney;
         money.cents= (mulMoney-money.dollars)* 100;
-
-//        dollars=this.dollars*m;
-//        cents=this.cents*m;
         return money;
     }
     public static Money[] multiply(Money[] moneys, int amt){
